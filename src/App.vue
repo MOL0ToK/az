@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-  asdasd
+  <icon id="az" :width="500"></icon>
 </div>
 </template>
 
