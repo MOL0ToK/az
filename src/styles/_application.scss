@@ -1,0 +1,23 @@
+// Bootstrap
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid";
+// packages
+// Utils
+@import "~@/styles/transitions";
+
+body {
+  color: $app-color-black;
+  background-color: $app-color-white;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+* {
+  outline: none!important;
+}

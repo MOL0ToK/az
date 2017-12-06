@@ -1,0 +1,17 @@
+$font-size-base: 1.2rem;
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/breakpoints";
+
+$app-color-primary: #445e86;
+$app-color-white: lighten($app-color-primary, 55);
+$app-color-black: darken($app-color-primary, 12);
+
+$app-shadow-primary-width: 1px;
+$app-shadow-primary-dy: 1.5px;
+$app-shadow-primary: 0 $app-shadow-primary-dy $app-shadow-primary-width $app-color-black;
+$app-shadow-primary-inverse: 0 -#{$app-shadow-primary-dy} $app-shadow-primary-width $app-color-black;
+
+$app-height-nav: 60px;
+
+$app-padding-primary: 15px;
