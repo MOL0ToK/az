@@ -1,5 +1,5 @@
 <template>
-<div id="app">
+<div id="app-0">
   <icon id="az" :width="500"></icon>
 </div>
 </template>
