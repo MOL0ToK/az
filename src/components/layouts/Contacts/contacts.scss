@@ -1,0 +1,19 @@
+.b-contacts {
+  margin-bottom: 50px;
+
+  .mdc-list-item {
+    height: 80px;
+
+    &__start-detail {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  a {
+    color: inherit!important;
+    text-decoration: none;
+  }
+}

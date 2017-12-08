@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import ICONS from '@/assets/icons';
+import ICONS from '%/assets/icons';
 
 const ICON_PREFIX = 'e-icon';
 
@@ -23,9 +23,9 @@ export default {
       validator: value => value in ICONS,
     },
   },
-  created() {
-    if (!this.width && !this.height) throw new Error('Size of icon is not defined');
-  },
+  // created() {
+  //   if (!this.width && !this.height) throw new Error('Size of icon is not defined');
+  // },
   computed: {
     link() {
       return '#' + ICONS[this.id].id;

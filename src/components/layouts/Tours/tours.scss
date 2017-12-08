@@ -1,0 +1,42 @@
+.b-tours {
+  margin-bottom: 40px;
+
+  .mdc-card + .mdc-card {
+    margin-top: 5px;
+  }
+
+  .mdc-list {
+    &-group {
+      padding-left: 0;
+    }
+
+    &-item {
+      height: 70px;
+
+      &__start-detail {
+        position: relative;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 72px;
+        height: 100%;
+        padding-right: 2px;
+        text-align: center;
+        color: $app-color-grey-light;
+        background-color: $app-color-grey-rgba;
+        font-size: 22px;
+        font-weight: 500;
+
+        &-month {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .e-icon {
+    color: $app-color-grey-light-rgba;
+  }
+}

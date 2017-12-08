@@ -1,0 +1,33 @@
+.l-nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: $app-color-grey;
+
+  .b-social-icons {
+    display: flex;
+    align-items: center;
+    @include media-breakpoint-down(sm) {
+      .e-icon {
+        width: 20px;
+      }
+    }
+
+    a {
+      flex: 1;
+      text-align: center;
+      margin-right: 15px;
+      color: $app-color-black;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    a:hover {
+      cursor: pointer;
+      transition: $app-transition;
+      color: $app-color-white;
+    }
+  }
+}

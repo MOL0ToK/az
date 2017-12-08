@@ -1,0 +1,77 @@
+.l-header {
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0;
+  color: $app-color-black;
+
+  .container {
+    background-image: url("../assets/az.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+  }
+
+  &__logo {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+
+  .b-heroes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23%;
+
+    @include media-breakpoint-down(sm) {
+      margin-top: 10%;
+      opacity: 0;
+    }
+  }
+
+  .b-hero {
+    position: relative;
+    transform: rotate(-20deg) translate(55px);
+    animation: rotating 3s ease-in-out infinite;
+
+    @include media-breakpoint-down(lg) {
+      transform: none;
+      animation: none;
+    }
+    @include media-breakpoint-up(xl) {
+      &:before {
+        position: absolute;
+        z-index: -1;
+        top: -60px;
+        left: 50%;
+        width: 2px;
+        height: 80px;
+        content: '';
+        background-color: $app-color-black;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 180px;
+    }
+
+    &:nth-child(1) {
+      &:before {
+        top: -50px;
+        left: 55%;
+      }
+    }
+
+    &:nth-child(4) {
+      &:before {
+        left: 55%;
+      }
+    }
+  }
+
+  @keyframes rotating {
+    50% {
+      transform: rotate(+20deg) translate(-55px);
+    }
+  }
+}
