@@ -8,7 +8,7 @@
     background-image: url("../assets/az.svg");
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 100% auto;
+    background-size: 71% auto;
   }
 
   &__logo {
@@ -20,10 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 23%;
+    margin-top: 18%;
 
     @include media-breakpoint-down(sm) {
-      margin-top: 10%;
+      margin-top: 0;
       opacity: 0;
     }
   }
@@ -57,14 +57,34 @@
 
     &:nth-child(1) {
       &:before {
-        top: -50px;
-        left: 55%;
+        // top: -50px;
+        left: 45%;
+      }
+    }
+
+    &:nth-child(2) {
+      &:before {
+        // top: -50px;
+        left: 60%;
+      }
+    }
+
+    &:nth-child(3) {
+      &:before {
+        // top: -50px;
+        // left: 55%;
       }
     }
 
     &:nth-child(4) {
       &:before {
         left: 55%;
+      }
+    }
+
+    &:nth-child(5) {
+      &:before {
+        // left: 55%;
       }
     }
   }
