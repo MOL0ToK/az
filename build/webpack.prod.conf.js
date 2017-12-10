@@ -1,11 +1,19 @@
-const path = require('path');
-const utils = require('./utils');
-const webpack = require('webpack');
-const config = require('../config');
+const glob = require('glob');
 const merge = require('webpack-merge');
+const path = require('path');
+const webpack = require('webpack');
+
 const baseWebpackConfig = require('./webpack.base.conf');
+const utils = require('./utils');
+const config = require('../config');
+
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const PrerenderSpaPlugin = require('prerender-spa-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 const env = process.env.NODE_ENV === 'testing' ?
   require('../config/test.env') :
@@ -15,7 +23,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
-      extract: false,
+      extract: true,
     }),
   },
   devtool: config.build.productionSourceMap ? '#source-map' : false,
@@ -34,6 +42,17 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
       sourceMap: true,
     }),
+    new ExtractTextPlugin({
+      filename: utils.assetsPath('css/[name].[contenthash].css'),
+    }),
+    new OptimizeCSSPlugin({
+      cssProcessorOptions: {
+        safe: true,
+      },
+    }),
+    new PurifyCSSPlugin({
+      paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
+    }),
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing' ?
         'index.html' : config.build.index,
@@ -47,11 +66,35 @@ const webpackConfig = merge(baseWebpackConfig, {
       chunksSortMode: 'dependency',
     }),
     new webpack.HashedModuleIdsPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: function (module) {
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../node_modules')
+          ) === 0
+        );
+      },
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'manifest',
+      chunks: ['vendor'],
+    }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),
       to: config.build.assetsSubDirectory,
       ignore: ['.*'],
     }]),
+    new PrerenderSpaPlugin(path.join(__dirname, '../dist'), ['/'], {
+      postProcessHtml: function (context) {
+        return context.html
+          .replace(/<script.*\.js"><\/script>/i, '')
+          .replace(/<\/?(html|head|body)>/g, '');
+      },
+    }),
+    new StyleExtHtmlWebpackPlugin,
   ],
 });
 
