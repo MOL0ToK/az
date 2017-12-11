@@ -1,9 +1,14 @@
 <template>
 <transition name="fade-out-in" mode="out-in">
   <div id="app-0" v-if="!isClosed" class="mdc-typography">
-    <div class="container -relative">
-      <div class="e-close" onclick="document.querySelector('#app-0').classList.add('-hidden');">
-        <icon id="close" :width="50"></icon>
+    <div class="row no-gutters">
+      <div class="container -relative">
+        <div class="e-close" onclick="
+          document.querySelector('#app-0').classList.add('-hidden');
+          document.querySelector('html').classList.add('-overflow-visible');
+        ">
+          <icon id="close" :width="45"></icon>
+        </div>
       </div>
     </div>
     <project-header></project-header>

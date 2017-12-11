@@ -1,5 +1,13 @@
 @import "~%/styles/transitions";
 
+html {
+  overflow: hidden;
+
+  &.-overflow-visible {
+    overflow: auto;
+  }
+}
+
 #app-0 {
   // packages
   @import "~%/@material/button/mdc-button";
@@ -27,7 +35,6 @@
   // @import "~%/@material/textfield/mdc-text-field";
   // @import "~%/@material/theme/mdc-theme";
   // @import "~%/@material/toolbar/mdc-toolbar";
-  // Bootstrap
   @import "~bootstrap/scss/bootstrap-grid";
   // Utils
   @import "~%/styles/globals";
@@ -52,6 +59,9 @@
   height: 100%;
   background-color: $app-color-white;
   font-family: Roboto, sans-serif;
+  font-weight: 400;
+  color: $app-color-black;
+  z-index: 777;
 
   .l-main {
     position: relative;
@@ -64,11 +74,22 @@
     z-index: 10;
     top: 15px;
     right: 15px;
+    border-radius: 50%;
+    background-color: $app-color-grey;
     cursor: pointer;
     transition: $app-transition;
+    @include media-breakpoint-down(sm) {
+      top: 5px;
+      right: 5px;
+
+      .e-icon {
+        width: 35px;
+        height: 35px;
+      }
+    }
 
     &:hover {
-      color: $app-color-grey;
+      color: $app-color-white;
     }
   }
 

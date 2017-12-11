@@ -51,6 +51,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true,
+        discardComments: { removeAll: true },
       },
     }),
     new HtmlWebpackPlugin({
@@ -91,6 +92,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       postProcessHtml: function (context) {
         return context.html
           .replace(/<script.*\.js"><\/script>/i, '')
+          .replace(/<meta.*>/i, '')
           .replace(/<\/?(html|head|body)>/g, '');
       },
     }),
