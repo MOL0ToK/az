@@ -2,21 +2,21 @@
   outline: none;
 }
 
-.hidden-xs-down {
+.-hidden-xs-down {
   @include media-breakpoint-down(xs) {
     display: none!important;
   }
 }
 
-.align-center {
+.-align-center {
   align-items: center;
 }
 
-.justify-center {
+.-justify-center {
   justify-content: center;
 }
 
-.surface {
+.-surface {
   position: relative;
 
   &:hover:after {
@@ -30,4 +30,8 @@
     pointer-events: none;
     background-color: rgba($app-color-grey-light-rgba, .1);
   }
+}
+
+.-relative {
+  position: relative;
 }

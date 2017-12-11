@@ -45,13 +45,13 @@ const webpackConfig = merge(baseWebpackConfig, {
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
     }),
+    // new PurifyCSSPlugin({
+    //   paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
+    // }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true,
       },
-    }),
-    new PurifyCSSPlugin({
-      paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
     }),
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing' ?

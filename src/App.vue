@@ -1,6 +1,11 @@
 <template>
 <transition name="fade-out-in" mode="out-in">
   <div id="app-0" v-if="!isClosed" class="mdc-typography">
+    <div class="container -relative">
+      <div class="e-close" onclick="document.querySelector('#app-0').classList.add('-hidden');">
+        <icon id="close" :width="50"></icon>
+      </div>
+    </div>
     <project-header></project-header>
     <navbar></navbar>
     <main class="l-main">

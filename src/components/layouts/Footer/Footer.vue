@@ -2,7 +2,7 @@
 <footer class="l-footer">
   <div class="row no-gutters">
     <div class="container">
-      <div class="row no-gutters align-center justify-center">
+      <div class="row no-gutters -align-center -justify-center">
         <a target="_blank" href="http://amtelectronics.com/">
           <img src="~%/assets/partners/amt.png" alt="">
         </a>

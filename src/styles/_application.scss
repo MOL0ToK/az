@@ -1,3 +1,5 @@
+@import "~%/styles/transitions";
+
 #app-0 {
   // packages
   @import "~%/@material/button/mdc-button";
@@ -29,7 +31,6 @@
   @import "~bootstrap/scss/bootstrap-grid";
   // Utils
   @import "~%/styles/globals";
-  @import "~%/styles/transitions";
   // Components
   @import "~%/components/layouts/Header/header";
   @import "~%/components/layouts/Navbar/navbar";
@@ -57,4 +58,24 @@
     padding-top: 15px;
     padding-bottom: 60px;
   }
+
+  .e-close {
+    position: absolute;
+    z-index: 10;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    transition: $app-transition;
+
+    &:hover {
+      color: $app-color-grey;
+    }
+  }
+
+  &.-hidden {
+    visibility: hidden;
+    transition: $app-transition;
+    opacity: 0;
+  }
+
 }
