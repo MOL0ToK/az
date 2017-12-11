@@ -36,7 +36,7 @@ const CONCERTS = [
   { date: '15.12.17', city: 'РЯЗАНЬ', link: 'https://vk.com/animalzrzn', place: 'RAZ DVA BAR' },
   { date: '16.12.17', city: 'ТВЕРЬ', link: 'https://vk.com/animaljazz_tver', place: 'Милле' },
   { date: '23.12.17', city: 'ПЕНЗА', link: 'https://vk.com/animal_djazz', place: 'ККЗ Пенза' },
-  { date: '27.01.18', city: 'АТМОСФЕРА', link: 'https://vk.com/atmosferasurgut', place: 'СУРГУТ' },
+  { date: '27.01.18', city: 'Сургут', link: 'https://vk.com/atmosferasurgut', place: 'АТМОСФЕРА' },
   { date: '08.02.18', city: 'ИЖЕВСК', link: 'https://vk.com/animal_izh', place: 'Пинта Бар' },
   { date: '15.02.18', city: 'ЧАРТОВА ДЮЖИНА', link: 'https://vk.com/wall-28866484_2111187', place: '' },
   { date: '22.02.18', city: 'ВОРОНЕЖ', link: 'https://vk.com/animalzvrn18', place: 'STATION MIR' },

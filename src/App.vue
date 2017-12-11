@@ -6,6 +6,7 @@
         <div class="e-close" onclick="
           document.querySelector('#app-0').classList.add('-hidden');
           document.querySelector('html').classList.add('-overflow-visible');
+          document.body.classList.add('-overflow-visible');
         ">
           <icon id="close" :width="45"></icon>
         </div>
