@@ -15,7 +15,7 @@
           </span>
           <span class="mdc-list-item__text">
             <a target="_blank" href="https://vk.com/zarankin">Александр Заранкин</a>
-            <span class="mdc-list-item__text__secondary">
+            <span class="mdc-list-item__secondary-text">
               <icon id="phone" :width="14" style="margin-bottom: -2px"></icon>
               <a target="_blank" href="tel:+79110922882">+7 (911) 092-28-82</a>
               <br>
@@ -36,7 +36,7 @@
           </span>
           <span class="mdc-list-item__text">
             <a target="_blank" href="https://vk.com/marygoldpr"> Мария Минина</a>
-            <span class="mdc-list-item__text__secondary">
+            <span class="mdc-list-item__secondary-text">
               <icon id="phone" :width="14" style="margin-bottom: -2px"></icon>
               <a target="_blank" href="tel:+79032165576">+7 (903) 216-55-76</a>
               <br>

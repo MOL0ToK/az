@@ -1,3 +1,4 @@
+const glob = require('glob');
 const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
@@ -11,6 +12,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
+const PurifyCSSPlugin = require('purifycss-webpack');
 const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 
 const env = process.env.NODE_ENV === 'testing' ?
@@ -42,6 +44,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
+    }),
+    new PurifyCSSPlugin({
+      paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
     }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
