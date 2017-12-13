@@ -1,10 +1,10 @@
 <template>
-<div class="b-tours">
+<div class="concerts">
   <h2 class="mdc-typography--display1">
     КОНЦЕРТЫ
   </h2>
   <div class="mdc-card" v-for="concert in concerts">
-    <div class="mdc-list-group -surface">
+    <div class="mdc-list-group mdc-list-group--pl_0 mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
       <ul class="mdc-list mdc-list--two-line">
         <a target="_blank" :href="concert.link" class="mdc-list-item">
           <span class="mdc-list-item__start-detail">

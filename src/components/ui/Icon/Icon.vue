@@ -10,7 +10,7 @@
 <script>
 import ICONS from '%/assets/icons';
 
-const ICON_PREFIX = 'e-icon';
+const ICON_PREFIX = 'icon';
 
 export default {
   props: {

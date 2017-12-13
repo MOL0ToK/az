@@ -1,0 +1,5 @@
+{
+  "vue":{
+    "wrap_attributes": "force-aligned"
+  }
+}

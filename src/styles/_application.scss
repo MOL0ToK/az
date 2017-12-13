@@ -13,11 +13,12 @@ html {
   }
 }
 
-#app-0 {
+.justerest-modal {
   // packages
   @import "~@material/button/mdc-button";
   @import "~@material/card/mdc-card";
   @import "~@material/list/mdc-list";
+  @import "~@material/ripple/mdc-ripple";
   @import "~@material/typography/mdc-typography";
   // @import "~@material/checkbox/mdc-checkbox";
   // @import "~@material/dialog/mdc-dialog";
@@ -31,7 +32,6 @@ html {
   // @import "~@material/linear-progress/mdc-linear-progress";
   // @import "~@material/menu/mdc-menu";
   // @import "~@material/radio/mdc-radio";
-  // @import "~@material/ripple/mdc-ripple";
   // @import "~@material/select/mdc-select";
   // @import "~@material/slider/mdc-slider";
   // @import "~@material/snackbar/mdc-snackbar";
@@ -68,40 +68,44 @@ html {
   color: $app-color-black;
   z-index: 777;
 
-  .l-main {
+  &--hidden {
+    visibility: hidden;
+    transition: $app-transition;
+    opacity: 0;
+  }
+
+  .main-section {
     position: relative;
     padding-top: 15px;
     padding-bottom: 60px;
   }
 
-  .e-close {
-    position: absolute;
-    z-index: 10;
-    top: 15px;
-    right: 15px;
-    border-radius: 50%;
-    background-color: $app-color-grey;
-    cursor: pointer;
-    transition: $app-transition;
-    @include media-breakpoint-down(sm) {
-      top: 5px;
-      right: 5px;
+  .closer {
+    &__btn {
+      position: absolute;
+      z-index: 10;
+      top: 15px;
+      right: 15px;
+      border-radius: 50%;
+      background-color: $app-color-grey;
+      cursor: pointer;
+      transition: $app-transition;
+      @include media-breakpoint-down(sm) {
+        top: 5px;
+        right: 5px;
+      }
 
-      .e-icon {
+      &:hover {
+        color: $app-color-white;
+      }
+    }
+
+    &__icon {
+      @include media-breakpoint-down(sm) {
         width: 35px;
         height: 35px;
       }
     }
-
-    &:hover {
-      color: $app-color-white;
-    }
-  }
-
-  &.-hidden {
-    visibility: hidden;
-    transition: $app-transition;
-    opacity: 0;
   }
 
 }

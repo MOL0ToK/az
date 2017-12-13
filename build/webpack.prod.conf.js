@@ -10,6 +10,7 @@ const config = require('../config');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const InlineChunkWebpackPlugin = require('html-webpack-inline-chunk-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const PrerenderSpaPlugin = require('prerender-spa-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
@@ -20,6 +21,9 @@ const env = process.env.NODE_ENV === 'testing' ?
   config.build.env;
 
 const webpackConfig = merge(baseWebpackConfig, {
+  entry: {
+    prod: './src/prod.js',
+  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -45,9 +49,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
     }),
-    new PurifyCSSPlugin({
-      paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
-    }),
+    // new PurifyCSSPlugin({
+    //   paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
+    // }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true,
@@ -80,9 +84,24 @@ const webpackConfig = merge(baseWebpackConfig, {
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'manifest',
-      chunks: ['vendor'],
+      name: 'mdc',
+      minChunks: function (module) {
+        return (
+          module.resource &&
+          /\.js$/.test(module.resource) &&
+          module.resource.indexOf(
+            path.join(__dirname, '../node_modules', '@material')
+          ) === 0
+        );
+      },
     }),
+    new InlineChunkWebpackPlugin({
+      inlineChunks: ['mdc', 'prod'],
+    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name: 'manifest',
+    //   chunks: ['vendor'],
+    // }),
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),
       to: config.build.assetsSubDirectory,
@@ -93,7 +112,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         return context.html
           .replace('<meta name="viewport" content="width=device-width,initial-scale=1">', '')
           .replace(/<\/?(html|head|body)>/g, '')
-          .replace(/<script.*\.js"><\/script>/i, '');
+          .replace(/<script.*\.js"><\/script>/g, '');
       },
     }),
     new StyleExtHtmlWebpackPlugin,

@@ -1,33 +1,35 @@
-.l-nav {
+.nav {
   position: sticky;
   z-index: 10;
   top: 0;
   background-color: $app-color-grey;
+}
 
-  .b-social-icons {
-    display: flex;
-    align-items: center;
-    @include media-breakpoint-down(sm) {
-      .e-icon {
-        width: 20px;
-      }
+.social-icons {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    &__icon {
+      width: 20px;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    margin-right: 15px;
+    text-align: center;
+    color: $app-color-black;
+
+    &:last-child {
+      margin-right: 0;
     }
 
-    a {
-      flex: 1;
-      text-align: center;
-      margin-right: 15px;
-      color: $app-color-black;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    a:hover {
+    &:hover {
       cursor: pointer;
       transition: $app-transition;
       color: $app-color-white;
     }
   }
+
 }

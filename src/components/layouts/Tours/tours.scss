@@ -1,4 +1,4 @@
-.b-tours {
+.concerts {
   margin-bottom: 40px;
 
   .mdc-card + .mdc-card {
@@ -6,7 +6,7 @@
   }
 
   .mdc-list {
-    &-group {
+    &-group--pl_0 {
       padding-left: 0;
     }
 
@@ -37,7 +37,7 @@
     }
   }
 
-  .e-icon {
+  .icon {
     color: $app-color-grey-light-rgba;
   }
 }

@@ -1,39 +1,38 @@
 <template>
-<transition name="fade-out-in" mode="out-in">
-  <div id="app-0" v-if="!isClosed" class="mdc-typography">
-    <div class="row no-gutters">
-      <div class="container -relative">
-        <div class="e-close" onclick="
-          document.querySelector('#app-0').classList.add('-hidden');
+<div id="app-0" class="justerest-modal mdc-typography">
+  <div class="closer row no-gutters">
+    <div class="container -relative">
+      <div class="closer__btn" onclick="
+          document.querySelector('#app-0').classList.add('justerest-modal--hidden');
           document.querySelector('html').classList.add('-overflow-visible');
           document.body.classList.add('-overflow-visible');
         ">
-          <icon id="close" :width="45"></icon>
+        <icon id="close" class="closer__icon" :width="45"></icon>
+      </div>
+    </div>
+  </div>
+  <project-header></project-header>
+  <navbar></navbar>
+  <main class="main-section row no-gutters">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10">
+          <tours></tours>
+          <youtube-video></youtube-video>
+          <contacts></contacts>
+          <chart></chart>
         </div>
       </div>
     </div>
-    <project-header></project-header>
-    <navbar></navbar>
-    <main class="l-main">
-      <div class="row no-gutters">
-        <div class="container">
-          <div class="row no-gutters">
-            <div class="offset-lg-2 col-lg-8 offset-md-1 col-md-10">
-              <tours></tours>
-              <youtube-video></youtube-video>
-              <contacts></contacts>
-              <chart></chart>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <project-footer></project-footer>
-  </div>
-</transition>
+  </main>
+  <project-footer></project-footer>
+</div>
 </template>
 
 <script>
+import mdcAutoInit from '@material/auto-init/dist/mdc.autoInit.min';
+import { MDCRipple } from '@material/ripple/dist/mdc.ripple.min';
+
 import ProjectHeader from '%/components/layouts/Header';
 import Navbar from '%/components/layouts/Navbar';
 import Tours from '%/components/layouts/Tours';
@@ -53,13 +52,9 @@ export default {
     Chart,
     ProjectFooter,
   },
-  data: () => ({
-    isClosed: false,
-  }),
-  methods: {
-    destroy() {
-      this.isClosed = true;
-    },
+  mounted() {
+    mdcAutoInit.register('MDCRipple', MDCRipple);
+    mdcAutoInit(this.$el, () => {});
   },
 };
 </script>
