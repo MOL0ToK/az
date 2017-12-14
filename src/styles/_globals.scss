@@ -1,23 +1,23 @@
 * {
   color: inherit;
-  font-weight: inherit;
   outline: none;
+  font-weight: inherit;
 }
 
-.-hidden-xs-down {
+.align-center {
+  align-items: center;
+}
+
+.hidden-xs-down {
   @include media-breakpoint-down(xs) {
     display: none!important;
   }
 }
 
-.-align-center {
-  align-items: center;
-}
-
-.-justify-center {
+.justify-center {
   justify-content: center;
 }
 
-.-relative {
+.relative {
   position: relative;
 }

@@ -1,15 +1,15 @@
 <template>
-<div class="concerts">
+<section class="concerts">
   <h2 class="mdc-typography--display1">
     КОНЦЕРТЫ
   </h2>
-  <div class="mdc-card" v-for="concert in concerts">
-    <div class="mdc-list-group mdc-list-group--pl_0 mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
+  <div v-for="concert in concerts" class="concert mdc-card">
+    <div class="concert__container mdc-list-group mdc-ripple-surface" data-mdc-auto-init="MDCRipple">
       <ul class="mdc-list mdc-list--two-line">
-        <a target="_blank" :href="concert.link" class="mdc-list-item">
-          <span class="mdc-list-item__start-detail">
+        <a target="_blank" :href="concert.link" class="concert__item mdc-list-item">
+          <span class="concert__date mdc-list-item__start-detail">
             {{getDay(concert.date)}}
-            <span class="mdc-list-item__start-detail-month">
+            <span class="concert__month">
               {{getMonth(concert.date)}}
             </span>
           </span>
@@ -20,12 +20,12 @@
               {{concert.place}}
             </span>
           </span>
-          <icon id="info" :width="24" class="mdc-list-item__end-detail -hidden-xs-down"></icon>
+          <icon id="info" :width="24" class="mdc-list-item__end-detail hidden-xs-down"></icon>
         </a>
       </ul>
     </div>
   </div>
-</div>
+</section>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-<div class="b-contacts">
+<section class="contacts">
   <h2 class="mdc-typography--display1">
     КОНТАКТЫ
   </h2>
@@ -7,8 +7,8 @@
     <div class="mdc-list-group">
       <h3 class="mdc-list-group__subheader">Booking:</h3>
       <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
-        <li class="mdc-list-item">
-          <span class="mdc-list-item__start-detail">
+        <li class="contacts__item mdc-list-item">
+          <span class="contacts__avatar mdc-list-item__start-detail">
             <a target="_blank" href="https://vk.com/zarankin">
               <img src="~%/assets/zar.jpg" alt="">
             </a>
@@ -28,8 +28,8 @@
       <hr class="mdc-list-divider mdc-list-divider--inset">
       <h3 class="mdc-list-group__subheader">PR:</h3>
       <ul class="mdc-list mdc-list--two-line mdc-list--avatar-list">
-        <li class="mdc-list-item">
-          <span class="mdc-list-item__start-detail">
+        <li class="contacts__item mdc-list-item">
+          <span class="contacts__avatar mdc-list-item__start-detail">
             <a target="_blank" href="https://vk.com/marygoldpr">
               <img src="~%/assets/mar.jpg" alt="">
             </a>
@@ -48,5 +48,5 @@
       </ul>
     </div>
   </div>
-</div>
+</section>
 </template>

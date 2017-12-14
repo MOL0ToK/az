@@ -1,43 +1,38 @@
 .concerts {
   margin-bottom: 40px;
+}
 
-  .mdc-card + .mdc-card {
-    margin-top: 5px;
+.concert {
+  margin-top: 5px;
+
+  &__container {
+    padding-left: 0;
   }
 
-  .mdc-list {
-    &-group--pl_0 {
-      padding-left: 0;
-    }
-
-    &-item {
-      height: 70px;
-
-      &__start-detail {
-        position: relative;
-        z-index: -1;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        width: 72px;
-        height: 100%;
-        padding-right: 2px;
-        text-align: center;
-        color: $app-color-grey-light;
-        background-color: $app-color-grey-rgba;
-        font-size: 22px;
-        font-weight: 500;
-
-        &-month {
-          font-size: 16px;
-          font-weight: 300;
-        }
-      }
-    }
+  &__item {
+    height: 70px;
   }
 
-  .icon {
-    color: $app-color-grey-light-rgba;
+  &__date.mdc-list-item__start-detail {
+    display: none;
+    position: relative;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 72px;
+    height: 100%;
+    padding-right: 2px;
+    text-align: center;
+    color: $app-color-grey-light;
+    background-color: $app-color-grey-rgba;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__month {
+    font-size: 16px;
+    font-weight: 300;
   }
 }

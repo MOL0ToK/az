@@ -1,11 +1,11 @@
-.l-footer {
+.footer {
   padding-top: 40px;
   padding-bottom: 40px;
   color: $app-color-white;
   background-color: $app-color-black;
 
-  img {
-    margin: 15px;
+  &__img {
     width: 80px;
+    margin: 15px;
   }
 }

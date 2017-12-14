@@ -1,19 +1,19 @@
-.b-contacts {
+.contacts {
   margin-bottom: 50px;
 
-  .mdc-list-item {
+  &__item {
     height: 80px;
+  }
 
-    &__start-detail {
-      height: 50px;
-      width: 50px;
-      border-radius: 50%;
-      overflow: hidden;
-    }
+  &__avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    overflow: hidden;
   }
 
   a {
-    color: inherit!important;
+    color: inherit;
     text-decoration: none;
   }
 }

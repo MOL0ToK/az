@@ -1,46 +1,43 @@
 $img-height: 230px;
 
-.b-chart {
-  @include media-breakpoint-down(sm) {
-    justify-content: center;
-  }
-
-  .row > div {
+.chart {
+  &__column {
     display: flex;
     justify-content: center;
 
     @include media-breakpoint-down(sm) {
+      justify-content: center;
       margin: 15px 0;
     }
   }
+}
 
-  .b-shag,
-  .b-shag-rem {
-    &__img {
-      height: $img-height;
-    }
-
-    &__actions {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-
-      a + a {
-        margin-left: 15px;
-      }
-    }
+.shag,
+.shag-rem {
+  &__img {
+    height: $img-height;
   }
 
-  .b-chartova-10 {
-    a {
-      font-size: 12px;
-    }
+  &__actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 
-    &__img {
-      display: flex;
-      align-items: center;
-      height: $img-height;
-      margin-bottom: 13px;
+    a + a {
+      margin-left: 15px;
     }
+  }
+}
+
+.chartova-10 {
+  &__button {
+    font-size: 12px;
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    height: $img-height;
+    margin-bottom: 13px;
   }
 }

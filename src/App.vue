@@ -1,7 +1,7 @@
 <template>
 <div id="app-0" class="justerest-modal mdc-typography">
   <div class="closer row no-gutters">
-    <div class="container -relative">
+    <div class="container relative">
       <div class="closer__btn" onclick="
           document.querySelector('#app-0').classList.add('justerest-modal--hidden');
           document.querySelector('html').classList.add('-overflow-visible');
