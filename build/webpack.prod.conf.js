@@ -1,4 +1,4 @@
-const glob = require('glob');
+const glob = require('glob-all');
 const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
@@ -49,9 +49,12 @@ const webpackConfig = merge(baseWebpackConfig, {
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
     }),
-    // new PurifyCSSPlugin({
-    //   paths: glob.sync(path.join(__dirname, '../src/**/*.vue')),
-    // }),
+    new PurifyCSSPlugin({
+      paths: glob.sync([
+        path.join(__dirname, '../src/**/*.vue'),
+        path.join(__dirname, '../node_modules/@material/ripple/dist/*.js'),
+      ]),
+    }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
         safe: true,
