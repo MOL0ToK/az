@@ -33,12 +33,15 @@ const MONTHS = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'и�
 const POINT = /\.|,/;
 
 const CONCERTS = [
-  { date: '15.12.17', city: 'РЯЗАНЬ', link: 'https://vk.com/animalzrzn', place: 'Raz Dva Bar' },
   { date: '27.01.18', city: 'СУРГУТ', link: 'https://vk.com/atmosferasurgut', place: 'Атмосфера' },
   { date: '03.02.18', city: 'ТВЕРЬ', link: 'https://vk.com/animaljazz_tver', place: 'Милле' },
   { date: '08.02.18', city: 'ИЖЕВСК', link: 'https://vk.com/animal_izh', place: 'Пинта Бар' },
   { date: '15.02.18', city: 'ЧАРТОВА ДЮЖИНА', link: 'https://vk.com/wall-28866484_2111187', place: '' },
+  { date: '16.02.18', city: 'КРАСНОДАР', link: 'https://vk.com/animalz_krd', place: 'Sgt. Pepper\'s Bar' },
+  { date: '17.02.18', city: 'РОСТОВ-НА-ДОНУ', link: 'https://vk.com/animalz_rnd', place: 'Бухарест' },
   { date: '22.02.18', city: 'ВОРОНЕЖ', link: 'https://vk.com/animalzvrn18', place: 'Station Mir' },
+  { date: '25.02.18', city: 'ХАРЬКОВ', link: 'https://vk.com/animal_jazz_kharkiv', place: 'Корова' },
+  { date: '26.02.18', city: 'КИЕВ', link: 'https://vk.com/animal_jazz_kyiv', place: 'Atlas' },
   { date: '27-29.07.18', city: 'ДОБРОФЕСТ', link: 'https://vk.com/dobrofest', place: '' },
 ];
 
