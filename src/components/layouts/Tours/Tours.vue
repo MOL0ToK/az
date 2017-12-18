@@ -42,6 +42,8 @@ const CONCERTS = [
   { date: '22.02.18', city: 'ВОРОНЕЖ', link: 'https://vk.com/animalzvrn18', place: 'Station Mir' },
   { date: '25.02.18', city: 'ХАРЬКОВ', link: 'https://vk.com/animal_jazz_kharkiv', place: 'Корова' },
   { date: '26.02.18', city: 'КИЕВ', link: 'https://vk.com/animal_jazz_kyiv', place: 'Atlas' },
+  { date: '07.03.18', city: 'САМАРА', link: 'https://vk.com/animaljazzsam', place: 'Звезда' },
+  { date: '08.03.18', city: 'КАЗАНЬ', link: 'https://vk.com/animaljazzkzn', place: 'Эрмитаж' },
   { date: '27-29.07.18', city: 'ДОБРОФЕСТ', link: 'https://vk.com/dobrofest', place: '' },
 ];
 
