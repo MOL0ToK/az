@@ -137,7 +137,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     new InlineChunkWebpackPlugin({
       inlineChunks: ['mdc', 'prod'],
     }),
-
     // copy custom static assets
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),
