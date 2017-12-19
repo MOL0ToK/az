@@ -21,6 +21,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const env = require('../config/prod.env');
 
 const webpackConfig = merge(baseWebpackConfig, {
+  entry: {
+    prod: './src/prod.js',
+  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -66,7 +69,12 @@ const webpackConfig = merge(baseWebpackConfig, {
     // Compress extracted CSS. We are using this plugin so that possible
     // duplicated CSS from different components can be deduped.
     new OptimizeCSSPlugin({
-      cssProcessorOptions: config.build.productionSourceMap ? { safe: true, map: { inline: false } } : { safe: true },
+      cssProcessorOptions: Object.assign({
+          safe: true,
+          discardComments: { removeAll: true },
+        },
+        config.build.productionSourceMap ? { map: { inline: false } } : {}
+      ),
     }),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
@@ -117,9 +125,6 @@ const webpackConfig = merge(baseWebpackConfig, {
         );
       },
     }),
-    new InlineChunkWebpackPlugin({
-      inlineChunks: ['mdc', 'prod'],
-    }),
     // This instance extracts shared chunks from code splitted chunks and bundles them
     // in a separate chunk, similar to the vendor chunk
     // see: https://webpack.js.org/plugins/commons-chunk-plugin/#extra-async-commons-chunk
@@ -128,6 +133,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       async: 'vendor-async',
       children: true,
       minChunks: 3,
+    }),
+    new InlineChunkWebpackPlugin({
+      inlineChunks: ['mdc', 'prod'],
     }),
 
     // copy custom static assets
@@ -141,6 +149,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         return context.html
           .replace('<meta name="viewport" content="width=device-width,initial-scale=1">', '')
           .replace(/<\/?(html|head|body)>/g, '')
+          .replace(/<\/script>/g, '</script>\n')
           .replace(/<script.*\.js"><\/script>/g, '');
       },
     }),
