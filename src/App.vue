@@ -56,6 +56,9 @@ export default {
     mdcAutoInit.register('MDCRipple', MDCRipple);
     mdcAutoInit(this.$el, () => {});
   },
+  updated() {
+    mdcAutoInit(this.$el, () => {});
+  },
 };
 </script>
 
