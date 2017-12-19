@@ -143,16 +143,17 @@ const webpackConfig = merge(baseWebpackConfig, {
       to: config.build.assetsSubDirectory,
       ignore: ['.*'],
     }]),
+    new StyleExtHtmlWebpackPlugin,
     new PrerenderSpaPlugin(path.join(__dirname, '../dist'), ['/'], {
       postProcessHtml: function (context) {
         return context.html
           .replace('<meta name="viewport" content="width=device-width,initial-scale=1">', '')
           .replace(/<\/?(html|head|body)>/g, '')
           .replace(/<\/script>/g, '</script>\n')
-          .replace(/<script.*\.js"><\/script>/g, '');
+          .replace(/\{/g, '{ ')
+          .replace(/<script.*\.js"><\/script>\n/g, '');
       },
     }),
-    new StyleExtHtmlWebpackPlugin,
   ],
 });
 
