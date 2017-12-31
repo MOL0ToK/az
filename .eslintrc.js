@@ -25,7 +25,7 @@ module.exports = {
   // IDEA: Все жизненно важные правила должны быть здесь
   rules: {
     'comma-dangle': [1, 'always-multiline'],
-    'no-console': [0, { allow: ['warn', 'error'] }],
+    'no-console': [1, { allow: ['warn', 'error'] }],
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'no-empty': 0,
     'no-unused-vars': [1, { argsIgnorePattern: '^h$' }],
