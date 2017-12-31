@@ -41,6 +41,7 @@ import Contacts from '%/components/layouts/Contacts';
 import Chart from '%/components/layouts/Chart';
 import ProjectFooter from '%/components/layouts/Footer';
 
+
 export default {
   name: 'app',
   components: {
