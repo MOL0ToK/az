@@ -60,7 +60,7 @@ module.exports = {
         loader: 'url-loader',
         exclude: [resolve('src/assets/icons')],
         options: {
-          limit: Infinity,
+          limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]'),
         },
       },
