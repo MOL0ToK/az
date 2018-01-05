@@ -11,19 +11,13 @@ const config = require('../config');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const InlineChunkWebpackPlugin = require('html-webpack-inline-chunk-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
-const PrerenderSpaPlugin = require('prerender-spa-plugin');
 const PurifyCSSPlugin = require('purifycss-webpack');
-const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const env = require('../config/prod.env');
 
 const webpackConfig = merge(baseWebpackConfig, {
-  entry: {
-    prod: './src/prod.js',
-  },
   module: {
     rules: utils.styleLoaders({
       sourceMap: config.build.productionSourceMap,
@@ -80,7 +74,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // you can customize output by editing /index.html
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: config.build.index,
+      filename: process.env.NODE_ENV === 'testing' ? 'index.html' : config.build.index,
       template: 'index.html',
       inject: true,
       minify: {
@@ -93,7 +87,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency',
     }),
-    // keep module.id stable when vender modules does not change
+    // keep module.id stable when vendor modules does not change
     new webpack.HashedModuleIdsPlugin(),
     // enable scope hoisting
     new webpack.optimize.ModuleConcatenationPlugin(),
@@ -114,16 +108,8 @@ const webpackConfig = merge(baseWebpackConfig, {
     // extract webpack runtime and module manifest to its own file in order to
     // prevent vendor hash from being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
-      name: 'mdc',
-      minChunks: function (module) {
-        return (
-          module.resource &&
-          /\.js$/.test(module.resource) &&
-          module.resource.indexOf(
-            path.join(__dirname, '../node_modules', '@material')
-          ) === 0
-        );
-      },
+      name: 'manifest',
+      minChunks: Infinity,
     }),
     // This instance extracts shared chunks from code splitted chunks and bundles them
     // in a separate chunk, similar to the vendor chunk
@@ -134,26 +120,12 @@ const webpackConfig = merge(baseWebpackConfig, {
       children: true,
       minChunks: 3,
     }),
-    new InlineChunkWebpackPlugin({
-      inlineChunks: ['mdc', 'prod'],
-    }),
     // copy custom static assets
     new CopyWebpackPlugin([{
       from: path.resolve(__dirname, '../static'),
       to: config.build.assetsSubDirectory,
       ignore: ['.*'],
     }]),
-    new StyleExtHtmlWebpackPlugin,
-    new PrerenderSpaPlugin(path.join(__dirname, '../dist'), ['/'], {
-      postProcessHtml: function (context) {
-        return context.html
-          .replace('<meta name="viewport" content="width=device-width,initial-scale=1">', '')
-          .replace(/<\/?(html|head|body)>/g, '')
-          .replace(/<\/script>/g, '</script>\n')
-          .replace(/\{/g, '{ ')
-          .replace(/<script.*\.js"><\/script>\n/g, '');
-      },
-    }),
   ],
 });
 

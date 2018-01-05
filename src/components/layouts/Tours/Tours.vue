@@ -29,38 +29,16 @@
 </template>
 
 <script>
+import axios from 'axios';
+import mdcAutoInit from '@material/auto-init/dist/mdc.autoInit.min';
+
 const MONTHS = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
 const POINT = /\.|,/;
 
-const CONCERTS = [
-  { date: '27.01.18', city: 'СУРГУТ', link: 'https://vk.com/atmosferasurgut', place: 'Атмосфера' },
-  { date: '03.02.18', city: 'ТВЕРЬ', link: 'https://vk.com/animaljazz_tver', place: 'Милле' },
-  { date: '08.02.18', city: 'ИЖЕВСК', link: 'https://vk.com/animal_izh', place: 'Пинта Бар' },
-  { date: '15.02.18', city: 'ЧАРТОВА ДЮЖИНА', link: 'https://vk.com/wall-28866484_2111187', place: '' },
-  { date: '16.02.18', city: 'КРАСНОДАР', link: 'https://vk.com/animalz_krd', place: 'Sgt. Pepper\'s Bar' },
-  { date: '17.02.18', city: 'РОСТОВ-НА-ДОНУ', link: 'https://vk.com/animalz_rnd', place: 'Бухарест' },
-  { date: '22.02.18', city: 'ВОРОНЕЖ', link: 'https://vk.com/animalzvrn18', place: 'Station Mir' },
-  { date: '23.02.18', city: 'БЕЛГОРОД', link: 'https://vk.com/animaljazz_bgd', place: 'SODA' },
-  { date: '25.02.18', city: 'ХАРЬКОВ', link: 'https://vk.com/animal_jazz_kharkiv', place: 'Корова' },
-  { date: '26.02.18', city: 'КИЕВ', link: 'https://vk.com/animal_jazz_kyiv', place: 'Atlas' },
-  { date: '07.03.18', city: 'САМАРА', link: 'https://vk.com/animaljazzsam', place: 'Звезда' },
-  { date: '08.03.18', city: 'КАЗАНЬ', link: 'https://vk.com/animaljazzkzn', place: 'Эрмитаж' },
-  { date: '05.04.18', city: 'МОСКВА', link: 'https://vk.com/animaljazz0504', place: 'ГЛАВCLUB' },
-  { date: '08.04.18', city: 'САНКТ-ПЕТЕРБУРГ', link: 'https://vk.com/animaljazz0804', place: 'Космонавт' },
-  { date: '27-29.07.18', city: 'ДОБРОФЕСТ', link: 'https://vk.com/dobrofest', place: '' },
-];
-
 export default {
   data: () => ({
-    concerts: CONCERTS
-      .map(concert => {
-        concert.date = concert.date
-          .split(POINT)
-          .map(date => date.padStart(2, '0'))
-          .join('.');
-        return concert;
-      })
-      .sort((a, b) => dateToNumber(a.date) - dateToNumber(b.date)),
+    concerts: [],
+    errors: [],
   }),
   methods: {
     getDay(str) {
@@ -72,9 +50,15 @@ export default {
       return MONTHS[parseInt(month) - 1];
     },
   },
+  async created() {
+    try {
+      const { data } = await axios.get('http://animaljazz.com/api/api_afisha.php');
+      this.concerts = data;
+    } catch (e) {
+      this.errors.push(e);
+    } finally {
+      setTimeout(() => mdcAutoInit(this.$el, () => {}));
+    }
+  },
 };
-
-function dateToNumber(dateStr) {
-  return parseInt(dateStr.split(POINT).reverse().join(''));
-}
 </script>
