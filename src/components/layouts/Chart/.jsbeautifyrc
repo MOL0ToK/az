@@ -1,5 +1,7 @@
 {
-  "vue":{
+  "indent_size": 2,
+  "preserve_newlines": true,
+  "vue": {
     "wrap_attributes": "force-aligned"
   }
 }
