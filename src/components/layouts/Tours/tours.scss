@@ -3,6 +3,7 @@
 }
 
 .concert {
+  overflow: hidden;
   margin-top: 5px;
 
   &__container {
@@ -10,13 +11,14 @@
   }
 
   &__item {
+    padding-left: 0;
     height: 70px;
   }
 
-  &__date.mdc-list-item__start-detail {
-    display: none;
+  &__date {
     position: relative;
-    z-index: -1;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
     flex-direction: column;

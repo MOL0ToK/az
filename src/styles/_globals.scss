@@ -1,6 +1,5 @@
 *,
 a {
-  color: inherit;
   outline: none;
   font-weight: inherit;
 }
@@ -11,7 +10,7 @@ a {
 
 .hidden-xs-down {
   @include media-breakpoint-down(xs) {
-    display: none!important;
+    display: none !important;
   }
 }
 
