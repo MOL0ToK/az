@@ -5,8 +5,8 @@
     color: $app-color-grey;
   }
 
-  &__item {
-    height: 80px;
+  &__item.mdc-list-item {
+    height: 90px;
   }
 
   &__avatar {
