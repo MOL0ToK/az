@@ -1,7 +1,11 @@
 {
   "indent_size": 2,
   "preserve_newlines": true,
-  "vue": {
+  "css": {
+    "newline_between_rules": true,
+    "space_around_combinator": true
+  },
+  "html": {
     "wrap_attributes": "force-aligned"
   }
 }
