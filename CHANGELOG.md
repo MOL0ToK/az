@@ -1,5 +1,17 @@
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/justerest/az/compare/v1.5.0...v1.6.0) (2018-03-25)
+
+
+### Features
+
+* **charts:** add new albom ([1203c9a](https://github.com/justerest/az/commit/1203c9a))
+* **footer:** del soundReliz ([649d943](https://github.com/justerest/az/commit/649d943))
+* **navbar:** add shadow ([f00d9e3](https://github.com/justerest/az/commit/f00d9e3))
+
+
+
 <a name="1.5.0"></a>
-# [1.5.0](https://github.com/justerest/az/compare/1.4.2...1.5.0) (2018-02-24)
+# [1.5.0](https://github.com/justerest/az/compare/1.4.2...v1.5.0) (2018-02-24)
 
 
 ### Bug Fixes
