@@ -1,14 +1,14 @@
 <template>
   <section class="chart row no-gutters">
     <div class="chart__column col-xl-4 col-sm-6">
-      <article class="shag-rem">
+      <article class="albom">
         <a target="_blank"
            href="https://itunes.apple.com/ru/album/счастье/1359783502">
-          <img class="shag-rem__img"
+          <img class="albom__img"
                src="~%/assets/happy.jpg"
                alt="">
         </a>
-        <section class="shag-rem__actions">
+        <section class="albom__actions">
           <a target="_blank"
              href="https://itunes.apple.com/ru/album/счастье/1359783502">
             <img src="~%/assets/itunes.png"
@@ -23,25 +23,18 @@
       </article>
     </div>
     <div class="chart__column col-xl-4 col-sm-6">
-      <article class="shag-rem">
+      <article class="albom">
         <a target="_blank"
-           href="https://itunes.apple.com/ru/album/%D1%88%D0%B0%D0%B3-%D0%B2%D0%B4%D0%BE%D1%85-remastered/1314384472">
-          <img class="shag-rem__img"
-               src="~%/assets/shag-rem.jpg"
+           href="https://vk.com/market-2571">
+          <img class="chartova-10__img"
+               src="~%/assets/shop.jpg"
                alt="">
         </a>
-        <section class="shag-rem__actions">
-          <a target="_blank"
-             href="https://itunes.apple.com/ru/album/%D1%88%D0%B0%D0%B3-%D0%B2%D0%B4%D0%BE%D1%85-remastered/1314384472">
-            <img src="~%/assets/itunes.png"
-                 alt="">
-          </a>
-          <a target="_blank"
-             href="https://itunes.apple.com/ru/album/%D1%88%D0%B0%D0%B3-%D0%B2%D0%B4%D0%BE%D1%85-remastered/1314384472">
-            <img src="~%/assets/itunes-buy.png"
-                 alt="">
-          </a>
-        </section>
+        <a class="albom__button mdc-button mdc-button--raised"
+           target="_blank"
+           href="https://vk.com/market-2571">
+          МАГАЗИН
+        </a>
       </article>
     </div>
     <div class="chart__column col-xl-4">

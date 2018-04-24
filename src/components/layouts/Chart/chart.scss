@@ -5,15 +5,14 @@ $img-height: 230px;
     display: flex;
     justify-content: center;
 
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       justify-content: center;
       margin: 15px 0;
     }
   }
 }
 
-.shag,
-.shag-rem {
+.albom {
   &__img {
     height: $img-height;
   }
@@ -27,11 +26,16 @@ $img-height: 230px;
       margin-left: 15px;
     }
   }
+
+  &__button {
+    width: 100%;
+  }
 }
 
 .chartova-10 {
   &__button {
-    font-size: 10px;
+    width: 100%;
+    font-size: 9px;
   }
 
   &__img {
