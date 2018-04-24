@@ -1,3 +1,18 @@
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/justerest/az/compare/v1.6.0...v1.7.0) (2018-04-24)
+
+
+### Bug Fixes
+
+* **nav:** sticky top: -1px ([f042815](https://github.com/justerest/az/commit/f042815))
+
+
+### Features
+
+* add shop link and image ([e12f4da](https://github.com/justerest/az/commit/e12f4da))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/justerest/az/compare/v1.5.0...v1.6.0) (2018-03-25)
 
