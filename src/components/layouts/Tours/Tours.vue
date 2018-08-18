@@ -30,7 +30,6 @@
 
 <script>
 import axios from 'axios';
-import mdcAutoInit from '@material/auto-init/dist/mdc.autoInit.min';
 
 const MONTHS = ['янв', 'фев', 'мар', 'апр', 'май', 'июн', 'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'];
 const POINT = /\.|,/;
@@ -57,9 +56,6 @@ export default {
     }
     catch (e) {
       this.errors.push(e);
-    }
-    finally {
-      setTimeout(() => mdcAutoInit(this.$el, () => { }));
     }
   },
 };

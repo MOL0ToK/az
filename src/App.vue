@@ -30,9 +30,6 @@
 </template>
 
 <script>
-import mdcAutoInit from '@material/auto-init/dist/mdc.autoInit.min';
-import { MDCRipple } from '@material/ripple/dist/mdc.ripple.min';
-
 import ProjectHeader from '%/components/layouts/Header';
 import Navbar from '%/components/layouts/Navbar';
 import Tours from '%/components/layouts/Tours';
@@ -51,10 +48,6 @@ export default {
     Contacts,
     Chart,
     ProjectFooter,
-  },
-  mounted() {
-    mdcAutoInit.register('MDCRipple', MDCRipple);
-    mdcAutoInit(this.$el, () => { });
   },
 };
 </script>
