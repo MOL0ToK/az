@@ -21,7 +21,7 @@
           <a target="_blank" href="https://vk.com/market-2571">
             <img class="chart__img chart__img_mb" src="~%/assets/shop.jpg" alt="">
           </a>
-          <a class="chart__button mdc-button mdc-button--raised" data-mdc-auto-init="MDCRipple" target="_blank" href="https://vk.com/market-2571">
+          <a class="chart__button mdc-button mdc-button--raised" target="_blank" href="https://vk.com/market-2571">
             МАГАЗИН
           </a>
         </article>
@@ -29,10 +29,10 @@
       <div class="chart__column col-xl-4">
         <article class="item item_last">
           <a target="_blank" href="http://www.nashe.ru/chartova/">
-            <img class="chart__img chart__img_mb" src="~%/assets/sound-silence.jpg" alt="">
+            <img class="chart__img chart__img_mb" src="~%/assets/podstava.jpg" alt="">
           </a>
-          <a class="chart__button mdc-button mdc-button--raised" data-mdc-auto-init="MDCRipple" target="_blank" href="http://www.nashe.ru/chartova/">
-            Голосуй за песню "Звук и тишина"
+          <a class="chart__button mdc-button mdc-button--raised" target="_blank" href="http://www.nashe.ru/chartova/">
+            Голосуй за песню "Подстава"
           </a>
         </article>
       </div>
