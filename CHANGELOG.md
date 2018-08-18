@@ -1,3 +1,14 @@
+<a name="1.8.0"></a>
+# [1.8.0](https://github.com/justerest/az/compare/v1.7.0...v1.8.0) (2018-08-18)
+
+
+### Features
+
+* add podstava image ([64f910d](https://github.com/justerest/az/commit/64f910d))
+* del ripple scripts ([98dceb2](https://github.com/justerest/az/commit/98dceb2))
+
+
+
 <a name="1.7.0"></a>
 # [1.7.0](https://github.com/justerest/az/compare/v1.6.0...v1.7.0) (2018-04-24)
 
@@ -47,12 +58,7 @@
 
 
 <a name="1.4.2"></a>
-## [1.4.2](https://github.com/justerest/az/compare/1.4.1...1.4.2) (2017-12-19)
-
-
-
-<a name="1.4.1"></a>
-## [1.4.1](https://github.com/justerest/az/compare/1.4.0...1.4.1) (2017-12-19)
+## [1.4.2](https://github.com/justerest/az/compare/1.4.0...1.4.2) (2017-12-19)
 
 
 
