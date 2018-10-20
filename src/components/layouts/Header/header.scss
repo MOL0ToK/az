@@ -8,24 +8,23 @@
     background-image: url("../assets/az.svg");
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 71% auto;
+    background-size: 58% auto;
   }
 
   &__row {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 18%;
+    margin-top: 13%;
 
     @include media-breakpoint-down(sm) {
       margin-top: 23%;
     }
   }
-}
 
-.hero {
-  &__img {
-    width: 100%;
-    max-width: 180px;
+  &__men {
+    max-width: 150%;
+    max-height: 600px;
+    padding-left: 30px;
   }
 }
