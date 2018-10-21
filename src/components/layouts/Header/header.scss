@@ -1,30 +1,17 @@
 .header-section {
-  position: relative;
-  overflow: hidden;
   padding: 30px 0;
-  color: $app-color-black;
+  text-align: center;
+  overflow: hidden;
 
-  &__container {
-    background-image: url("../assets/az.svg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 58% auto;
-  }
-
-  &__row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 13%;
-
-    @include media-breakpoint-down(sm) {
-      margin-top: 23%;
-    }
+  &__logo {
+    padding-right: 30px;
+    width: 800px;
+    max-width: 90%;
   }
 
   &__men {
-    max-width: 150%;
+    padding-left: 10px;
+    max-width: 100%;
     max-height: 600px;
-    padding-left: 30px;
   }
 }
