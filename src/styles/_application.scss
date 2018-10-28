@@ -3,28 +3,45 @@
 body,
 html {
   overflow: hidden;
+
   max-width: 100vw;
   max-height: 100vh;
 
   &.-overflow-visible {
     overflow: auto;
+
     max-width: none;
     max-height: none;
   }
 }
 
 .justerest-modal {
+  position: fixed;
+  z-index: 777;
+  top: 0;
+  left: 0;
+
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+
+  width: 100%;
+  height: 100%;
+
+  color: $app-color-black;
+  background-color: $app-color-white;
+
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
   /* packages */
+
   @import "~@material/button/mdc-button";
   @import "~@material/card/mdc-card";
   @import "~@material/list/mdc-list";
   @import "~@material/ripple/mdc-ripple";
   @import "~@material/typography/mdc-typography";
   @import "~bootstrap/scss/bootstrap-grid";
-
   /* Utils */
   @import "~%/styles/globals";
-
   /* Components */
   @import "~%/components/layouts/Header/header";
   @import "~%/components/layouts/Navbar/navbar";
@@ -33,31 +50,22 @@ html {
   @import "~%/components/layouts/Contacts/contacts";
   @import "~%/components/layouts/Chart/chart";
   @import "~%/components/layouts/Footer/footer";
-
   /* Fonts */
   @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic");
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  width: 100%;
-  height: 100%;
-  background-color: $app-color-white;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  color: $app-color-black;
-  z-index: 777;
+
 
   &--hidden {
     visibility: hidden;
+
     transition: $app-transition;
+
     opacity: 0;
   }
 
   .main-section {
     position: relative;
+
     padding-top: 15px;
     padding-bottom: 60px;
   }
@@ -68,10 +76,12 @@ html {
       z-index: 10;
       top: 15px;
       right: 15px;
-      border-radius: 50%;
-      background-color: $app-color-grey;
+
       cursor: pointer;
       transition: $app-transition;
+
+      border-radius: 50%;
+      background-color: $app-color-grey;
 
       @include media-breakpoint-down(sm) {
         top: 5px;
@@ -94,14 +104,17 @@ html {
   .adrenaline,
   .green-concert {
     position: fixed;
+    z-index: 779;
+
     width: 250px;
     height: 150px;
-    z-index: 779;
+
     cursor: pointer;
 
     img,
     .icon {
       display: block;
+
       max-width: 100%;
       max-height: 100%;
     }
@@ -114,14 +127,17 @@ html {
     &:after,
     &:before {
       position: absolute;
-      left: 0;
       bottom: 0;
+      left: 0;
+
       width: 100%;
+
+      text-align: center;
+      word-spacing: nowrap;
+      text-transform: uppercase;
+
       font-size: 48px;
       font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-      word-spacing: nowrap
     }
 
     &:before {
@@ -139,12 +155,13 @@ html {
   }
 
   .green-concert {
-    bottom: 50px;
     right: 50px;
+    bottom: 50px;
 
     &:before {
-      content: '29.12 СПБ';
       top: -50px;
+
+      content: '29.12 СПБ';
     }
   }
 
@@ -152,7 +169,7 @@ html {
 
 [data-radario-event-id] {
   position: fixed;
+  z-index: 779;
   right: 50px;
   bottom: 50px;
-  z-index: 779;
 }

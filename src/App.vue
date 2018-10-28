@@ -26,14 +26,6 @@
       </div>
     </main>
     <project-footer></project-footer>
-    <div class="adrenaline">
-      <icon id="logo_adrenaline"></icon>
-      <icon id="close" class="closer__icon" :width="45" onclick="this.parentNode.style.display = 'none';"></icon>
-    </div>
-    <div class="green-concert">
-      <img src="./assets/green-concert.png">
-      <icon id="close" class="closer__icon" :width="45" style="margin-top: 30px" onclick="this.parentNode.style.display = 'none';"></icon>
-    </div>
   </div>
 </template>
 
@@ -61,3 +53,53 @@ export default {
 </script>
 
 <style lang="scss" src="%/styles/_application.scss"></style>
+<style lang="scss">
+
+@font-face {
+    font-family: 'HeliosCond';
+    font-weight: bold;
+    font-style: normal;
+
+    src: url('./assets/fonts/HeliosCond-Bold.eot');
+    src: local('HeliosCond Bold'), local('HeliosCond-Bold'),
+        url('./assets/fonts/HeliosCond-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/HeliosCond-Bold.woff') format('woff'),
+        url('./assets/fonts/HeliosCond-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('./assets/fonts/HeliosCond-Bold-Italic.eot');
+    src: local('HeliosCond Bold Italic'), local('HeliosCond-Bold-Italic'),
+        url('./assets/fonts/HeliosCond-Bold-Italic.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/HeliosCond-Bold-Italic.woff') format('woff'),
+        url('./assets/fonts/HeliosCond-Bold-Italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('./assets/fonts/HeliosCond-Italic.eot');
+    src: local('HeliosCond Italic'), local('HeliosCond-Italic'),
+        url('./assets/fonts/HeliosCond-Italic.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/HeliosCond-Italic.woff') format('woff'),
+        url('./assets/fonts/HeliosCond-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'HeliosCond';
+    src: url('./assets/fonts/HeliosCond.eot');
+    src: local('HeliosCond Regular'), local('HeliosCond'),
+        url('./assets/fonts/HeliosCond.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/HeliosCond.woff') format('woff'),
+        url('./assets/fonts/HeliosCond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+</style>
