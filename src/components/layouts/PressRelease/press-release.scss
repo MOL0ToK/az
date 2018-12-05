@@ -1,0 +1,26 @@
+.press-section {
+
+  &__text-bold {
+    font-family: 'DIN 2014';
+    font-weight: bold;
+  }
+
+  &__text-demi {
+    font-family: 'DIN 2014 Demi';
+  }
+
+  &__text-light {
+    font-family: 'DIN 2014';
+    font-weight: 300;
+  }
+
+  &__text-light-italic {
+    font-family: 'DIN 2014';
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &__text-center {
+    text-align: center;
+  }
+};
