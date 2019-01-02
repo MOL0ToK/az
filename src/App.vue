@@ -26,14 +26,6 @@
       </div>
     </main>
     <project-footer></project-footer>
-    <div class="adrenaline">
-      <icon id="logo_adrenaline"></icon>
-      <icon id="close" class="closer__icon" :width="45" onclick="this.parentNode.style.display = 'none';"></icon>
-    </div>
-    <div class="green-concert">
-      <img src="./assets/green-concert.png">
-      <icon id="close" class="closer__icon" :width="45" style="margin-top: 30px" onclick="this.parentNode.style.display = 'none';"></icon>
-    </div>
   </div>
 </template>
 
