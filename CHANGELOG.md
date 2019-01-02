@@ -1,3 +1,26 @@
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/justerest/az/compare/v1.8.0...v1.9.0) (2019-01-02)
+
+
+### Features
+
+* add bannersssssssss ([e9c0418](https://github.com/justerest/az/commit/e9c0418))
+* change video to "Podstava" ([c923cd7](https://github.com/justerest/az/commit/c923cd7))
+* new header ([2f1573a](https://github.com/justerest/az/commit/2f1573a))
+
+
+### Reverts
+
+* "new yaer heroes" ([e7f2eea](https://github.com/justerest/az/commit/e7f2eea))
+* "remove bannersssssssss" ([1889a6f](https://github.com/justerest/az/commit/1889a6f))
+* "return old header" ([7d788bd](https://github.com/justerest/az/commit/7d788bd))
+
+
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/justerest/az/compare/v1.7.0...v1.8.0) (2018-08-18)
 
@@ -84,6 +107,3 @@
 
 <a name="1.1.0"></a>
 # 1.1.0 (2017-12-14)
-
-
-
