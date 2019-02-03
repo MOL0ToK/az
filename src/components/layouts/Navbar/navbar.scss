@@ -2,7 +2,8 @@
   position: sticky;
   z-index: 10;
   top: -1px;
-  background-color: $app-color-grey;
+  //background-color: $app-color-grey;
+  background-color: #ff3d57;
   box-shadow: 0 5px 5px -5px $app-color-black;
 }
 
@@ -31,5 +32,9 @@
       transition: $app-transition;
       color: $app-color-white;
     }
+  }
+
+  &__icon {
+    fill: #fff;
   }
 }

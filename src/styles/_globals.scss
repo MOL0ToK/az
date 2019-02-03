@@ -21,3 +21,16 @@ a {
 .relative {
   position: relative;
 }
+
+.linear-bgr {
+  background: linear-gradient(to right, $app-color-gradient-left, $app-color-gradient-right);
+}
+.bg-white {
+  background-color: #ffffff;
+}
+.height-10 {
+  height: 10px;
+}
+.height-20 {
+  height: 20px;
+}
