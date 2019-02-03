@@ -1,0 +1,40 @@
+.nav {
+  position: sticky;
+  z-index: 10;
+  top: -1px;
+  //background-color: $app-color-grey;
+  background-color: #ff3d57;
+  box-shadow: 0 5px 5px -5px $app-color-black;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+
+  @include media-breakpoint-down(sm) {
+    &__icon {
+      width: 20px;
+    }
+  }
+
+  &__item {
+    flex: 1;
+    margin-right: 15px;
+    text-align: center;
+    color: $app-color-black;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+      transition: $app-transition;
+      color: $app-color-white;
+    }
+  }
+
+  &__icon {
+    fill: #fff;
+  }
+}

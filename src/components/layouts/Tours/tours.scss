@@ -1,0 +1,42 @@
+.concerts {
+  margin-bottom: 40px;
+}
+
+.concert {
+  overflow: hidden;
+  margin-top: 5px;
+
+  &__container {
+    padding-left: 0;
+  }
+
+  &__item {
+    padding-left: 0;
+    height: 70px;
+  }
+
+  &__date {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 72px;
+    height: 100%;
+    padding-right: 2px;
+    text-align: center;
+    //color: $app-color-grey-light;
+    //background-color: $app-color-grey-rgba;
+    color: #fff;
+    background-color: #ff3d57;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  &__month {
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
