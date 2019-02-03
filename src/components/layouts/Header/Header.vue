@@ -3,6 +3,9 @@
   <div class="header-section__container container">
   </div>
   <div class="header-section__buttons">
+    <div class="header-background-image container">
+      <img class="haeder-back-img" src="~%/assets/header-back.png" alt="" style="">
+    </div>
     <div class="header-section__row container">
         <div class="concert-link cosmo linear-bgr">
             <div class="date">

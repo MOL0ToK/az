@@ -1,38 +1,46 @@
 .header-section {
   padding: 30px 0 0 0;
+
   color: $app-color-black;
+
   line-height: 1.1;
 
   &__container {
+    padding-top: 18%;
+
     background-image: url("../assets/az.svg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 71% auto;
-    padding-top: 18%;
   }
 
   &__row {
+    position: relative;
+    z-index: 110;
+
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-around;
-    //margin-top: 18%;
+
     padding-top: 50px;
+
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
     }
   }
 
   &__logo {
-    padding-right: 30px;
     width: 800px;
     max-width: 90%;
+    padding-right: 30px;
   }
 
     &__buttons {
         width: 100%;
-        background: #fff;
         margin-bottom: 15px;
         padding-bottom: 30px;
+
+        background: #fff;
     }
 
     &__spacer {
@@ -40,14 +48,17 @@
     }
 
     &__vk {
-        width: 100%;
         position: relative;
+
+        width: 100%;
+
         text-align: center;
     }
 }
 
 .hero {
   position: relative;
+
   transform: rotate(-20deg) translate(55px);
   animation: rotating 3s ease-in-out infinite;
 
@@ -55,16 +66,18 @@
     transform: none;
     animation: none;
   }
-
   @include media-breakpoint-up(xl) {
     &:before {
       position: absolute;
       z-index: -1;
       top: -60px;
       left: 50%;
+
       width: 2px;
       height: 80px;
+
       content: '';
+
       background-color: $app-color-black;
     }
   }
@@ -94,14 +107,17 @@
 }
 
 .concert-link {
+    margin-bottom: 15px;
+    padding: 5px;
+
     text-align: center;
+    text-transform: uppercase;
+
     font-family: Rubik, sans-serif;
     line-height: 1.1;
-    padding: 5px;
-    margin-bottom: 15px;
-    text-transform: uppercase;
     &.cosmo {
         order: 1;
+
         @include media-breakpoint-down(sm) {
             order: 2;
         }
@@ -110,57 +126,74 @@
         order: 3;
     }
     .city {
-        font-size: 30px;
         margin-bottom: 5px;
+
+        font-size: 30px;
     }
     .date {
+        padding: 10px 30px 0 30px;
+
+        color: #fff;
+
         font-family: Cuprum, sans-serif;
         font-size: 40px;
-        color: #fff;
-        padding: 10px 30px 0 30px;
     }
     .place {
-        font-size: 18px;
         margin: 3px 0;
+
         color: #fff;
+
+        font-size: 18px;
     }
     .link {
         display: block;
-        padding: 10px;
+
         margin: 10px auto;
-        border: none;
+        padding: 10px;
+
+        cursor: pointer;
         text-align: center;
+        text-decoration: none;
+
+        color: #ff4a5c;
+        border: none;
+        background: #fff;
+
         font-family: Rubik, sans-serif;
         font-size: 22px;
         font-weight: bold;
-        color: #ff4a5c;
-        background: #fff;
-        text-decoration: none;
-        cursor: pointer;
     }
 }
 .vote {
     order: 2;
-    text-align: center;
+
     margin-bottom: 15px;
+
+    text-align: center;
+
     @include media-breakpoint-down(sm) {
-        order: 1;
         flex-basis: 100%;
+        order: 1;
     }
     a {
         display: inline-block;
+
         margin: 0 auto;
-        font-size: 30px;
         padding: 10px 25px;
-        color: #fff;
-        text-transform: uppercase;
+
         text-decoration: none;
+        text-transform: uppercase;
+
+        color: #fff;
+
+        font-size: 30px;
     }
 }
 .vk-music {
     position: absolute;
-    left: 0;
     top: 10px;
+    left: 0;
+
     width: 110px;
     img {
         width: 100%;
@@ -172,22 +205,45 @@
     right: 0;
     bottom: 0;
     img {
-        height: 80px;
         width: auto;
+        height: 80px;
     }
 }
 .vk-concerts {
     display: inline-block;
+
     margin: 0 110px;
-    font-size: 30px;
     padding: 10px 25px;
-    color: #fff;
+
     text-transform: uppercase;
+
+    color: #fff;
+
+    font-size: 30px;
+
     @include media-breakpoint-down(sm) {
         margin: 0 10px;
     }
 }
 
+.header-background-image {
+  margin-bottom: -260px;
+
+  @include media-breakpoint-down(sm) {
+      margin-bottom: -100px;
+  }  
+}
+
+.header-background-image img {
+  position: relative;
+  top: -50px;
+
+  width: 100%;
+
+  @include media-breakpoint-down(sm) {
+      top: -20px;
+  }
+}
 
 @keyframes rotating {
   50% {

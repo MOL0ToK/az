@@ -1,5 +1,5 @@
 <template>
-<nav class="nav row no-gutters">
+<nav class="nav row no-gutters linear-bgr">
   <div class="container">
     <div class="social-icons">
       <a class="social-icons__item" target="_blank" href="http://vk.com/animaljazzband">
