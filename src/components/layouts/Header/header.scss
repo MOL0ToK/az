@@ -23,10 +23,12 @@
     justify-content: space-around;
 
     padding-top: 50px;
+    padding-right: 0;
+    padding-left: 0;
 
     @include media-breakpoint-down(sm) {
       flex-wrap: wrap;
-    }
+    };
   }
 
   &__logo {
@@ -244,6 +246,7 @@
 
 .header-background-image {
   margin-bottom: -260px;
+  padding: 0;
 
   @include media-breakpoint-down(sm) {
       margin-bottom: -100px;
@@ -266,3 +269,4 @@
     transform: rotate(+20deg) translate(-55px);
   }
 }
+;
