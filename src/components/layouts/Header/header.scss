@@ -114,6 +114,7 @@
 }
 
 .concert-link {
+    width: 190px;
     margin-bottom: 15px;
     padding: 5px;
 
@@ -122,6 +123,11 @@
 
     font-family: Rubik, sans-serif;
     line-height: 1.1;
+
+    @include media-breakpoint-down(xs) {
+      width: 150px;
+    }
+    
     &.cosmo {
         order: 1;
 
@@ -135,15 +141,20 @@
     .city {
         margin-bottom: 5px;
 
-        font-size: 30px;
+        font-size: 30px;    
     }
     .date {
-        padding: 10px 30px 0 30px;
+        margin: 0 auto;
+        padding-top: 10px;
 
         color: #fff;
 
         font-family: Cuprum, sans-serif;
         font-size: 40px;
+
+        @include media-breakpoint-down(xs) {
+          font-size: 30px;
+        }
     }
     .place {
         margin: 3px 0;
@@ -151,6 +162,10 @@
         color: #fff;
 
         font-size: 18px;
+
+        @include media-breakpoint-down(xs) {
+          font-size: 14px;
+        }
     }
     .link {
         display: block;
@@ -169,6 +184,10 @@
         font-family: Rubik, sans-serif;
         font-size: 22px;
         font-weight: bold;
+
+        @include media-breakpoint-down(xs) {
+          font-size: 16px;
+        }
     }
 }
 .vote {
