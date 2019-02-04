@@ -31,12 +31,12 @@
     </div>
   </div>
   <div class="header-section__spacer height-10 bg-white"></div>
-  <div class="header-section__vk container">
-      <div class="vk-music hidden-xs-down">
+  <div class="header-section__vk">
+      <div class="vk-music">
           <img src="~%/assets/vk-music.png" alt="VK music" />
       </div>
       <div class="vk-concerts">Большие концерты по заявкам</div>
-      <div class="nashe-radio hidden-xs-down">
+      <div class="nashe-radio">
           <img src="~%/assets/nashe-radio.png" alt="Наше радио" />
       </div>
   </div>
