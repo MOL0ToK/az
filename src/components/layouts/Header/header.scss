@@ -19,7 +19,7 @@
     z-index: 110;
 
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-around;
 
     padding-top: 50px;
@@ -113,106 +113,149 @@
   }
 }
 
-.concert-link {
-    width: 190px;
-    margin-bottom: 15px;
-    padding: 5px;
-
+.itunes-logos {
+    flex: 1 1 auto;
+    order: 1;
+    width: 15%;
     text-align: center;
-    text-transform: uppercase;
-
-    font-family: Rubik, sans-serif;
-    line-height: 1.1;
-
-    @include media-breakpoint-down(xs) {
-      width: 150px;
-    }
-    
-    &.cosmo {
-        order: 1;
-
-        @include media-breakpoint-down(sm) {
-            order: 2;
-        }
-    }
-    &.gorby {
+    @include media-breakpoint-down(sm) {
+        width: 20%;
+        order: 2;
+        padding: 0 10px;
+    };
+    @media (max-width: 400px) {
         order: 3;
-    }
-    .city {
-        margin-bottom: 5px;
-
-        font-size: 30px;    
-    }
-    .date {
+        width: 100%;
+    };
+    a {
+        display: block;
         margin: 0 auto;
-        padding-top: 10px;
-
-        color: #fff;
-
-        font-family: Cuprum, sans-serif;
-        font-size: 40px;
-
-        @include media-breakpoint-down(xs) {
-          font-size: 30px;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
         }
+    }
+    .gplay-1 {
+        @include media-breakpoint-down(sm) {
+            display: none;
+        };
+    }
+}
+.itunes-logos-sm {
+    flex: 1 1 auto;
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    @include media-breakpoint-down(sm) {
+        display: block;
+        width: 20%;
+        order: 4;
+    }
+    @media (max-width: 400px) {
+        order: 4;
+        width: 100%;
+    };
+}
+
+.no-bomb {
+    flex: 1 1 auto;
+    order: 2;
+    width: 23%;
+    padding: 20px;
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+        order: 3;
+        width: 40%;
+    };
+    @media (max-width: 400px) {
+        order: 2;
+        width: 100%;
+    };
+    img {
+        width: 80%;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+.time-to-love {
+    flex: 1 1 auto;
+    order: 3;
+    width: 31%;
+    text-align: center;
+    font-size: 6vw;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    @include media-breakpoint-down(sm) {
+        order: 1;
+        width: 100%;
+        font-size: 46px;
+    };
+    .red {
+        color: #f11717;
+    }
+}
+.concert-link {
+    flex: 1 1 auto;
+    order: 4;
+    width: 31%;
+    font-family: 'Cuprum';
+    text-transform: uppercase;
+    color: #f9535e;
+    text-align: center;
+    @include media-breakpoint-down(sm) {
+        display: none;
+    };
+
+    .date {
+        font-size: 4vw;
     }
     .place {
-        margin: 3px 0;
-
+        font-size: 24px;
+    }
+    .link {
+        display: inline-block;
+        padding: 10px 15px;
+        margin-top: 10px;
+        font-family: 'Roboto';
+        font-weight: bold;
+        font-size: 30px;
+        color: #000;
+        text-decoration: none;
+        background: -webkit-gradient(linear, left top, right top, from(#ff3e57), to(#ff5d62));
+        background: linear-gradient(to right, #ff3e57, #ff5d62);
+    }
+}
+.concert-link-long {
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 15px 25px 15px;
+    @include media-breakpoint-up(sm) {
+        display: none;
+    };
+    .date-place {
+        width: 60%;
+        text-align: center;
+        font-family: 'Cuprum';
+        text-transform: uppercase;
+        font-size: 48px;
         color: #fff;
-
-        font-size: 18px;
-
-        @include media-breakpoint-down(xs) {
-          font-size: 14px;
+        .place {
+            font-size: 24px;
         }
     }
     .link {
         display: block;
-
-        margin: 10px auto;
-        padding: 10px;
-
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-
-        color: #ff4a5c;
-        border: none;
+        padding: 15px;
         background: #fff;
-
-        font-family: Rubik, sans-serif;
-        font-size: 22px;
+        box-shadow: 1px 1 4px -1px rgba(0, 0, 0, 0.3);
+        font-size: 26px;
         font-weight: bold;
-
-        @include media-breakpoint-down(xs) {
-          font-size: 16px;
-        }
-    }
-}
-.vote {
-    order: 2;
-
-    margin-bottom: 15px;
-
-    text-align: center;
-
-    @include media-breakpoint-down(sm) {
-        flex-basis: 100%;
-        order: 4;
-    }
-    a {
-        display: inline-block;
-
-        margin: 0 auto;
-        padding: 10px 25px;
-
         text-decoration: none;
+        color: #000;
         text-transform: uppercase;
-
-        color: #fff;
-
-        font-size: 30px;
     }
 }
 .vk-music {

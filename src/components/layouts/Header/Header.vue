@@ -3,43 +3,48 @@
   <div class="header-section__container container">
   </div>
   <div class="header-section__buttons">
-    <div class="header-background-image container">
-      <img class="haeder-back-img" src="~%/assets/header-back.png" alt="" style="">
-    </div>
     <div class="header-section__row container">
-        <div class="concert-link cosmo linear-bgr">
-            <div class="date">
-                8 марта
-            </div>
-            <div class="place">
-                Космонавт
-            </div>
-            <a class="link" href="javascript:void(0);return false;" onclick="pnwidget.show({init:{referral_auth: 'animaldzhazspb'}, event:{alias: 'animal-dzhaz'}, tickets_show: true, exclude_dates: true, customStyle: true, hideHeader: false, closeButton: true})">Купить билет</a>
+        <div class="itunes-logos">
+            <a href="https://goo.gl/g7PBgX" target="_blank" class="itunes-1">
+                <img src="~%/assets/itunes-buy-big.png" border="0" />
+            </a>
+            <a href="https://goo.gl/H34oBc" target="_blank" class="gplay-1">
+                <img src="~%/assets/google-play.png" border="0" />
+            </a>
         </div>
-        <div class="vote">
-            <a href="https://vk.com/wall-2571_52792" class="linear-bgr" target="_blank">Голосовать</a>
+        <div class="itunes-logos visible-sm-block itunes-logos-sm">
+            <a href="https://goo.gl/H34oBc" target="_blank">
+                <img src="~%/assets/google-play.png" border="0" />
+            </a>
         </div>
-        <div class="concert-link gorby linear-bgr">
+
+        <div class="no-bomb">
+            <img src="~%/assets/no-bomb.png" border="0" />
+        </div>
+        <div class="time-to-love">
+            Время <span class="red">любить</span>
+        </div>
+        <div class="concert-link">
             <div class="date">
                 14 апреля
             </div>
             <div class="place">
-                ДК им. Горбунова
+                Москва, ДКГ
             </div>
-            <a class="link" href="https://www.concert.ru/Buy?ActionID=85174&ActionDateID=265037&Mode=WithAsyncSave" target="_blank">Купить билет</a>
+            <a class="link" href="https://legendadkg.ru/animaljaz" target="_blank">Билеты</a>
         </div>
     </div>
   </div>
-  <div class="header-section__spacer height-10 bg-white"></div>
-  <div class="header-section__vk">
-      <div class="vk-music">
-          <img src="~%/assets/vk-music.png" alt="VK music" />
-      </div>
-      <div class="vk-concerts">Большие концерты по заявкам</div>
-      <div class="nashe-radio">
-          <img src="~%/assets/nashe-radio.png" alt="Наше радио" />
-      </div>
-  </div>
+
+    <div class="header-section__vk concert-link-long">
+        <div class="date-place">
+            14 апреля<br />
+            <span class="place">Москва, ДКГ</span>
+        </div>
+        <a class="link" href="https://legendadkg.ru/animaljaz" target="_blank">Билеты</a>
+    </div>
+
+
   <div class="header-section__spacer height-20 bg-white"></div>
 </header>
 </template>

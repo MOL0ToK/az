@@ -29,10 +29,10 @@
       <div class="chart__column col-xl-4">
         <article class="item item_last">
           <a target="_blank" href="http://www.nashe.ru/chartova/">
-            <img class="chart__img chart__img_mb" src="~%/assets/podstava.jpg" alt="">
+            <img class="chart__img chart__img_mb" src="~%/assets/no-bomb.png" alt="">
           </a>
           <a class="chart__button mdc-button mdc-button--raised" target="_blank" href="http://www.nashe.ru/chartova/">
-            Голосуй за песню "Подстава"
+            Голосовать за "Чувства"
           </a>
         </article>
       </div>
