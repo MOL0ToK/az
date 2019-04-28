@@ -1,5 +1,5 @@
 <template>
-<header class="header-section row no-gutters  linear-bgr">
+<header class="header-section row no-gutters linear-bgr">
   <div class="header-section__container container">
   </div>
   <div class="header-section__buttons">
@@ -26,24 +26,41 @@
         </div>
         <div class="concert-link">
             <div class="date">
-                14 апреля
+                25 июля
             </div>
             <div class="place">
-                Москва, ДКГ
+                Москва, FLACON
             </div>
-            <a class="link" href="https://legendadkg.ru/animaljaz" target="_blank">Билеты</a>
+            <a class="link" href="https://summersound.ru/animaljazz/" target="_blank">Билеты</a>
         </div>
+        <div class="concert-link">
+            <div class="date">
+                31 июля
+            </div>
+            <div class="place">
+                СПб, Roof Place
+            </div>
+            <a class="link" href="http://roofmusicgroup.ru" target="_blank">Билеты</a>
+        </div>
+
     </div>
   </div>
 
-    <div class="header-section__vk concert-link-long">
+    <div class="header-section__vk concert-link-long linear-bgr">
         <div class="date-place">
-            14 апреля<br />
-            <span class="place">Москва, ДКГ</span>
+            25 июля<br />
+            <span class="place">Москва, FLACON</span>
         </div>
-        <a class="link" href="https://legendadkg.ru/animaljaz" target="_blank">Билеты</a>
+        <a class="link" href="https://summersound.ru/animaljazz/" target="_blank">Билеты</a>
     </div>
 
+    <div class="header-section__vk concert-link-long linear-bgr">
+        <div class="date-place">
+            31 июля<br />
+            <span class="place">СПб, Roof Place</span>
+        </div>
+        <a class="link" href="http://roofmusicgroup.ru" target="_blank">Билеты</a>
+    </div>
 
   <div class="header-section__spacer height-20 bg-white"></div>
 </header>
